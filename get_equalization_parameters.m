@@ -6,7 +6,7 @@ function equalization_parameters = get_equalization_parameters(modulation_type, 
                 eq_type = extractAfter(eq_type, 'ls+');
             end
             for l=1:length(modulation_type)
-                filename = sprintf("gridsearch_%s_20dB_%s.csv", eq_type, modulation_type{l});
+                filename = sprintf("gridsearch_%s_20dB_%s_position1.csv", eq_type, modulation_type{l});
                 filepath = fullfile('.','equalization_params', filename);
                 params_matrix = readmatrix(filepath);
                 [~, cols_number] = size(params_matrix);
